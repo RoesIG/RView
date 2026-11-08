@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10121e">
+  <meta name="description" content="RViw: tu biblioteca personal de películas, series y valoraciones.">
+  <title>RViw · Tu biblioteca audiovisual</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <button type="button" class="brand" data-action="navigate" data-page="inicio" aria-label="RViw · Ir al inicio">
+        <span id="brand-logo" class="brand-icon" aria-hidden="true"><img src="assets/RView-icon.png" alt="" width="52" height="52"></span>
+        <span class="brand-name">R<span>Viw</span></span>
+      </button>
+      <nav id="sidebar-nav" class="nav"></nav>
+      <div class="sidebar-bottom">
+        <div class="storage-label"><span class="status-dot"></span><span>Biblioteca personal</span></div>
+        <p class="sidebar-hint">Tus datos se guardan en este navegador. Haz copias desde Ajustes.</p>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-title" id="page-heading"><h1>Inicio</h1></div>
+        <div class="top-actions">
+          <label class="search-shell" for="global-search"><span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="global-search" type="search" autocomplete="off" placeholder="Buscar película o serie..." aria-label="Buscar película o serie"></label>
+          <button type="button" class="icon-btn mobile-menu" id="menu-toggle" aria-label="Mostrar menú">☰</button>
+        </div>
+      </header>
+      <main id="main" class="content" tabindex="-1"></main>
+      <footer class="footer"><span>RViw · Biblioteca personal</span><span>Datos audiovisuales: TMDB cuando está configurado</span></footer>
+    </div>
+  </div>
+  <div id="modal-layer" class="modal-layer" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="file-input" type="file" hidden>
+  <script src="app.js" defer></script>
+</body>
+</html>
